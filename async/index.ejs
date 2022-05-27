@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="time_text">Boom</h2>
+    <input type="button" id="ajax_button" value="버튼"/>
+</body>
+
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $("#ajax_buton").click(() => {
+
+        $.ajax({
+            type : "GET", // 전송방식
+            url : "./ajax",
+            data : {}, // 전송 파라미터
+            dataType : "text", // 받아올 데이터 타입(생략가능)
+            success : (time) => {$("#time_text").html},
+            error : (log) => {alert("실패" + log)}
+        })
+        
+    })
+</script>
+
+</html>

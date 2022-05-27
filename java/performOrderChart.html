@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="perform.css">
+    <div id="grid-content" class="performOrderChartForm">
+        <div class="performOrderChartForm search-btn-area">
+            <input type="text" class="k-textbox" id="itemNm" readonly/>
+            <input type="hidden" id="itemId">
+            <button class="k-button k-primary page-search-btn" type="button" id="itemSelBtn" onclick= "lfn_itemInfo();"><spring:message code = "btn_search"/></button>
+        </div>
+        <table class="performOrderChartForm-table">
+            <colgroup>
+                <col class="col-left-content">
+                <col class="col-right-content">
+            </colgroup>
+            <tr>
+                <td class="left-content-box">
+                    <div id="performOrderChart"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
